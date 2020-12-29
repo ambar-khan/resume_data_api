@@ -31,7 +31,7 @@ class Api::ExperiencesController < ApplicationController
     @experience.company_name = params[:company_name]
     @experience.details = params[:details]
       #save it
-    @experience.save
+    @experience.save!
 
     render 'show.json.jb'
   end
