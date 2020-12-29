@@ -1,0 +1,3 @@
+@skills.map do |skill|
+  skill: skill.skill_name
+end
