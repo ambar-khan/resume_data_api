@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
     get "/experiences" => "experiences#index"
     get "/experiences/:id" => "experiences#show"
-    # post "/experiences" => "experiences#create"
+    post "/experiences" => "experiences#create"
 
     # get "/educations" => "education#index"
     # get "/educations" => "education#show"
