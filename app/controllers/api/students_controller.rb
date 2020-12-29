@@ -20,4 +20,8 @@ class Api::StudentsController < ApplicationController
     @student.save
     render "show.json.jbuilder"
   end
+  def show
+    @student = Student.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
 end
