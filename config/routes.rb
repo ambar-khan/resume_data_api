@@ -5,13 +5,13 @@ Rails.application.routes.draw do
     
     get "/skills" => "skills#index"
 
-    # get "/experience" => "experience#index"
+    get "/experiences" => "experiences#index"
     get "/experiences/:id" => "experiences#show"
-    # post "/experience" => "experience#create"
+    # post "/experiences" => "experiences#create"
 
-    # get "/education" => "education#index"
-    # get "/education" => "education#show"
-    # post "/education" => "education#create"
+    # get "/educations" => "education#index"
+    # get "/educations" => "education#show"
+    # post "/educations" => "education#create"
 
   end
 
