@@ -1,3 +1,4 @@
 {
-  skill: @skill.skill_name
+  skill: @skill.skill_name,
+  student_id: @skill.student_id
 }
