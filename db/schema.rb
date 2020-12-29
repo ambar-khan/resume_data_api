@@ -10,16 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_12_29_023646) do
-=======
+
 ActiveRecord::Schema.define(version: 2020_12_29_020408) do
->>>>>>> 04061806111f7b62728b5191d3e348adc7e891bb
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "capstones", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -28,7 +24,6 @@ ActiveRecord::Schema.define(version: 2020_12_29_020408) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-=======
   create_table "skills", force: :cascade do |t|
     t.string "skill_name"
     t.integer "student_id"
@@ -36,7 +31,6 @@ ActiveRecord::Schema.define(version: 2020_12_29_020408) do
     t.datetime "updated_at", precision: 6, null: false
   end
   
->>>>>>> 04061806111f7b62728b5191d3e348adc7e891bb
   create_table "educations", force: :cascade do |t|
     t.string "start_date"
     t.string "end_date"
@@ -59,11 +53,7 @@ ActiveRecord::Schema.define(version: 2020_12_29_020408) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
-  create_table "skills", force: :cascade do |t|
-    t.string "skill_name"
-    t.integer "student_id"
-=======
+
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -76,7 +66,6 @@ ActiveRecord::Schema.define(version: 2020_12_29_020408) do
     t.string "resume_url"
     t.string "github_url"
     t.string "photo"
->>>>>>> 04061806111f7b62728b5191d3e348adc7e891bb
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
