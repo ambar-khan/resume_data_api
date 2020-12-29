@@ -11,7 +11,7 @@ class Api::EducationsController < ApplicationController
 
   def create
     @education = Education.new(
-      # student_id: params[:student_id],
+      student_id: params[:student_id],
       start_date: params[:start_date],
       end_date: params[:end_date],
       degree: params[:degree],
