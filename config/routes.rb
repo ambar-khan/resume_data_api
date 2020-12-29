@@ -10,9 +10,10 @@ Rails.application.routes.draw do
     post "/experiences" => "experiences#create"
     patch "/experiences/:id" => "experiences#update"
 
-    # get "/educations" => "education#index"
-    # get "/educations" => "education#show"
-    # post "/educations" => "education#create"
+    get "/educations" => "educations#index"
+    get "/educations" => "educations#show"
+    post "/educations" => "educations#create"
+    patch "/educations" => "educations#update"
 
   end
 
