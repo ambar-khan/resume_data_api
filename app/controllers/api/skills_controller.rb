@@ -15,4 +15,11 @@ class Api::SkillsController < ApplicationController
     )
     render 'show.json.jb'
   end
+
+  def update
+    @skill = Skill.find_by(id: params[:id])
+    @skill.skill_name = params[:skill_name]
+    @skill.student_id = params[:student_id]
+    render 'show.json.jb'
+  end
 end
