@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     post "/students" => "students#create"
     
     get "/skills" => "skills#index"
+    get "/skills/:id" => "skills#show"
+
 
     get "/experiences" => "experiences#index"
     get "/experiences/:id" => "experiences#show"
