@@ -11,14 +11,14 @@ class Api::EducationsController < ApplicationController
 
   def create
     @education = Education.new(
-      student_id: params[:student_id],
+      # student_id: params[:student_id],
       start_date: params[:start_date],
       end_date: params[:end_date],
       degree: params[:degree],
       university_name: params[:university_name],
       details: params[:details],
     )
-    @education.save!
+    @education.save
     render 'show.json.jb'
   end
 
