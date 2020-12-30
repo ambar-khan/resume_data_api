@@ -24,4 +24,26 @@ class Api::StudentsController < ApplicationController
     @student = Student.find_by(id: params[:id])
     render "show.json.jbuilder"
   end
+  def update
+    @student = student.find_by(id: params[:id])
+    #modify it
+    @student.start_date = params[:start_date]
+    @student.end_date = params[:end_date]
+    @student.job_title = params[:job_title]
+    @student.company_name = params[:company_name]
+    @student.details = params[:details]
+      #save it
+    @student.save!
+
+    render 'show.json.jbuilder'
+  end
+
+  def destroy
+    @student = Student.find_by(id: params[:id])
+    if @student.destroy
+      render json: {message: "Student destroyed"}
+    else
+      render json: {message: "Could not destroy student"}
+    end
+  end
 end
