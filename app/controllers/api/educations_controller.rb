@@ -35,4 +35,13 @@ class Api::EducationsController < ApplicationController
 
     render 'show.json.jb'
   end
+
+  def destroy
+    @education = Education.find_by(id: params[:id])
+    if @education.destroy
+      render json: {message: "Education destroyed"}
+    else
+      render json: {message: "Could not destroy education"}
+    end
+  end
 end

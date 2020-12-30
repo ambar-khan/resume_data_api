@@ -35,4 +35,13 @@ class Api::ExperiencesController < ApplicationController
 
     render 'show.json.jb'
   end
+  
+  def destroy
+    @experience = Experience.find_by(id: params[:id])
+    if @experience.destroy
+      render json:{message: "Experience destroyed"}
+    else
+      render json:{message: "Could not destroy experience"}
+    end
+  end
 end
