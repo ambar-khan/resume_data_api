@@ -9,10 +9,11 @@ class Api::SkillsController < ApplicationController
   end
 
   def create
-    @skill = Skill.create(
+    @skill = Skill.new(
       skill_name: params[:skill_name],
       student_id: params[:student_id]
     )
+    @skill.save
     render 'show.json.jb'
   end
 
@@ -20,6 +21,13 @@ class Api::SkillsController < ApplicationController
     @skill = Skill.find_by(id: params[:id])
     @skill.skill_name = params[:skill_name]
     @skill.student_id = params[:student_id]
+    @skill.save
     render 'show.json.jb'
+  end
+
+  def destroy
+    @skill = Skill.find_by(id: [params[:id]])
+    @skill.destroy
+    render json: {message: "Skill deleted"}
   end
 end

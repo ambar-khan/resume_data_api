@@ -1,0 +1,7 @@
+@capstones.each do |capstone|
+  {
+    name: capstone.name,
+    description: capstone.description,
+    url: capstone.url
+  }
+end

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     get "/skills/:id" => "skills#show"
     post "/skills" => "skills#create"
     patch "/skills/:id" => "skills#create"
+    delete "/skills/:id" => "skills#destroy"
+
+    get "/capstones" => "capstones#index"
+    get "/capstones/:id" => "capstones#show"
 
 
     get "/experiences" => "experiences#index"
