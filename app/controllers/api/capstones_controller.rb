@@ -17,6 +17,7 @@ class Api::CapstonesController < ApplicationController
       student_id: params[:student_id]
     )
     @capstone.save
+    render 'show.json.jb'
   end
 
   def update
